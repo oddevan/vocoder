@@ -1,10 +1,7 @@
-$Id: README.txt,v 1.8 2002/09/20 02:30:51 emanuel Exp $
-
-========================================================================
 Zerius Vocoder 1.3 README
-------------------------------------------------------------------------
-Emanuel Borsboom <em@nuel.ca> September 2002
 ========================================================================
+
+Emanuel Borsboom <em@nuel.ca> September 2002
 
 This program is used to make speech sound cool.  It imposes the vocal
 effects of speech onto another sound.  This technique has been made
@@ -13,7 +10,6 @@ popular by artists such as Kraftwerk and Laurie Anderson.
 Note: This manual applies only to the command-line version.  If you are
 using the GUI version, see the help file that is included with it.
 
-------------
 Installation
 ------------
 
@@ -30,7 +26,6 @@ Once you have the executable (or if you have downloaded a binary), you
 can copy it to the directory where you keep your binaries, or just run
 it where it is.
 
------
 Usage
 -----
 
@@ -41,58 +36,56 @@ parameters follow in the next section.
 
 To specify tho parameters on the command-line, use the following syntax:
 
-        vocoder [-q] [-N] [-b <band-count>] [-w <window-length] 
-                [-o <window-overlap>] [-v <volume>] 
-                <modulator-file> <carrier-file> <output-file>
+    vocoder [-q] [-N] [-b <band-count>] [-w <window-length] 
+            [-o <window-overlap>] [-v <volume>] 
+            <modulator-file> <carrier-file> <output-file>
 
 (Note: this version also supports the version 1.0 syntax in order
 to be compatible with already existing front ends).
 
-----------
 Parameters
 ----------
 
 A detailed explanation of what these parameters mean is in the next
 section.
 
-Modulator filename (<modulator-file>)
+Modulator filename `<modulator-file>`
 	the path to a sound file that contains the modulator waveform
 	(required).
 
-Carrier filename (<carrier-file>)
+Carrier filename `<carrier-file>`
 	the path to a sound file that contains the carrier waveform
 	(required).
 
-Window length (-w <window-length>)
+Window length `-w <window-length>`
 	the number of samples that will be analyzed at a time, and must
 	be a power of two (defaults to about 1/15th of a second worth of
 	samples).
 
-Window overlap (-o <window-overlap>)
+Window overlap `-o <window-overlap>`
 	the number of samples that the windows will be overlapped
 	(defaults to one half of the window-length).
 
-Band count (-b <band-count>)
+Band count `-b <band-count>`
 	the number of frequency bands that the carrier will be modulated
 	with (defaults to 16).
 
-Output volume (-v <volume>)
+Output volume `-v <volume>`
 	the volume the output will be scaled by (defaults to 1.0).
 
-Output filename (output-file)
+Output filename `output-file`
 	is the path to the output sound file (required).
 
 These options are only available on the command-line:
 
--N	turns off normalizing the output with respect to the carrier. 
+`-N	` turns off normalizing the output with respect to the carrier. 
 
--q	turns off any displays.
+`-q	` turns off any displays.
 
 The input sound files must be mono, 8- or 16-bit linear, uncompressed
 AIFF or WAVE files.  The output sound file will have the same format
 as the modulator (regardless of the file extension you give it).
 
------------
 Explanation
 -----------
 
@@ -131,7 +124,7 @@ means a number that can be created by multiplying some number of two's
 together.  For example, the following numbers are the powers of two up
 to 4096:
 
-        2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096
+    2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096
 
 You get the next power of two by doubling the previous one.
 
@@ -160,16 +153,11 @@ results, the best results will be achieved by changing their values.
 The best way figure out all the numbers and what the best waveforms
 are is to experiment.  Have fun!
 
-----------------
 Closing Comments
 ----------------
 
-Please see the web site at
-
-        http://www.nuel.ca/Vocoder
-
-for the latest information.  The latest version will always be
-available from there.
+Please see the web site at <http://www.nuel.ca/Vocoder> for the latest information.  The
+latest version will always be available from there.
 
 If you have any problems, don't hesitate to contact me.  I am always
 pleased to help.  Also, drop me a line if like this program, or have
@@ -178,11 +166,10 @@ you release some music utilizing the vocoder, please tell me so I can
 try to find it (freebies are always accepted)!  My e-mail address is
 em@nuel.ca.
 
-Chanks to Cody Jones <cody@zerius.com> for porting to MacOS.
+Thanks to Cody Jones <cody@zerius.com> for porting to MacOS.
 
 I appreciate any bug reports.
 
----------
 Copyright
 ---------
 
@@ -198,4 +185,3 @@ You are free to do whatever you like with the vocoder, as long as the
 copyright notice stays intact and you note any changes.
 
 There is no warranty.
-
